@@ -4,8 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://kit.fontawesome.com/6aaa0cf9a5.js" 
+    crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header class="header">
+            <img src="assets/images/logo/ohmyfood.png" class="header_logo" alt="logo entreprise">
+            <nav>
+                <i class="fa-solid fa-location-dot"></i>
+                <input
+                    type="search"
+                    id="site-search"
+                    name="recherche"
+                    aria-label="Search through site content"
+                    placeholder="Paris, Belleville"
+                />
+            </nav>
+
+            <!-- Description de l'entreprise-->
+            <div class="header_discover">
+                <div class="header_discover_title">
+                    <h3>Réservez le menu qui <br> vous convient</h3>
+                </div>
+                <div class="header_discover_p">
+                    <p>Découvez des restaurants d'exception, <br> séléctionnés par nos soins.</p>
+                </div>
+                <button
+                onclick="window.location.hash='restaurants';"
+                class="btn btn_grad btn_header"
+                >
+                Explorer nos restaurants
+                </button>
+            </div>
+    </header>
+
+    <!-- 2eme bloc-->
+    <section class="function">
+            <div class="function_section">
+                <div class="cards">
+                    <div class="function_title">
+                    <!-- Titre de la section-->
+                    <h3>Fonctionnement</h3>
+                    </div>
+                
+                    <!-- 1ere carte fonctionnement-->
+                    <div class="function_card btn_function">
+                        <div class="function_card_title">
+                            <h6>1</h6>
+                        </div>
+                        <div class="function_card_i">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="funnction_card_p">
+                            <p>Choisissez un restaurant</p>
+                        </div>
+                    </div>
+            
+                    <!-- 2eme carte fonctionnement-->
+                    <div class="function_card btn_function">
+                        <div class="function_card_title">
+                            <h6>2</h6>
+                        </div>
+                        <div class="function_card_i">
+                            <i class="fa-solid fa-list-ul"></i>
+                        </div>
+                        <div class="funnction_card_p">
+                            <p>Composez votre menu</p>
+                        </div>
+                    </div>
+            
+                    <!-- 3eme carte fonctionnement-->
+                    <div class="function_card btn_function">
+                        <div class="function_card_title">
+                            <h6>3</h6>
+                        </div>
+                        <div class="function_card_i">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div class="funnction_card_p">
+                            <p>Dégustez au restaurant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <h3>ohmyfood</h3>
+        <div class="footer_ip">
+            <div class="footer_i">
+                <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div class="footer_p">
+                <p>Proposer un restaurant</p>
+            </div>
+        </div>
+        <div class="footer_ip">
+            <div class="footer_i">
+                <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <div class="footer_p">
+                <p>Devenir partenaire</p>
+            </div>
+        </div>
+        <p>Mentions légales</p>
+        <!-- Lien vers une messagerie-->
+        <a href="mailto:ohmyfood@contact.fr">Contact</a>
+    </footer>
 </body>
 </html>

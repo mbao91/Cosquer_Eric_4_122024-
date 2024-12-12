@@ -1,0 +1,47 @@
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin ccenter {
+    display: flex;
+    flex-direction: column;
+    margin :auto;
+}
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin rcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@mixin rrverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+@mixin flex {
+    display: flex;
+}
+@mixin width {
+    width: 100%;
+}
+@mixin italic {
+    font-style: italic;
+}
+/**** cercle ****/
+@mixin circle {
+    border-radius: 50%;
+    padding: 5px;
+}
+/**** Responsive ****/
+@mixin tablet__responsive {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop__responsive {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}

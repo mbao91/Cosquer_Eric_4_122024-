@@ -1,0 +1,49 @@
+@import "../useful/_variables";
+@import "../useful/_mixins";
+@import "../layout/_body";
+
+@media screen and (max-width: 767.98px) {
+    .footer {
+        @include column;
+        justify-content: flex-start;
+        color: $color_white;
+        background-color: $bc_lightblack;
+        padding: 20px;
+        h3 {
+            line-height: 2;
+            padding-bottom: 10px;
+            @include italic;
+        }
+        &_i {
+            margin-right: 10px
+        }
+        a {
+            text-decoration: none;
+            color: $color_white;
+        }
+        h3, &_ip, p, a {
+            @include flex;
+        }
+        &_i, &_p, p {
+            margin-bottom: 5px;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .footer {
+        @include rrverse;
+        color: $color_white;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: $bc_lightblack;
+        h3 {
+            @include italic;
+        }
+        &_ip {
+            @include rcenter;
+            align-items: center;
+        }
+    }
+    
+}
