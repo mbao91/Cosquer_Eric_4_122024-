@@ -1,76 +1,79 @@
 @import "../useful/_variables";
 @import "../useful/_mixins";
-@import "../layout/_body";
-@import "../useful/_typography";
 @import "../components/_buttons";
 
-@media screen and (max-width: 3000px) {
+/* mobile responsive */
+@include mobile__responsive {
     .function {
-        
-        @include rcenter;
-        padding: 50px 0 50px 20px;
-        &_section {
-            @include column;
+        @include ccenter;
+        background-color: $color_white;
+        padding-top: 20px;
+        width: 100%;
+        h3 {
             width: 100%;
+            display: flex;
+            justify-content: flex-start;
         }
-        &_title {
-            @include column;
-            padding-bottom: 15px;
-        }
-        &_card {
-            @include rcenter;
-            background-color: $bc_lightgrey;
-            border-radius: 30px;
-            align-items: center;
-            margin-bottom: 20px;
-            width: 90%;
-            height: 120px;
-            &_title {
-                z-index: 1;
-                @include circle;
-                background-color: $color_primary;
-                color: $color_white;    
-                justify-content: center;
+        &_section {
+            @include cwrap;
+            &_card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-radius: 20px;
+                margin: 12px 0;
+                border: 1px solid $bc_lightgrey;
+                padding: 0 70px 0 32px;
+                background-color: $bc_lightgrey;
+                color: black;
+                height: 65px;
+          
+                h6 {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  position: sticky;
+                  color: $color_white;
+                  background-color: $color_primary;
+                  border-radius: 50%;
+                  width: 20px;
+                  height: 5px;
+                  margin-left: -42px;
+                  margin-right: 25px;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                }
+          
+                p {
+                  font-weight: bold;
+                }
+          
+                i {
+                  padding: 0 18px 0 0;
+                }
             }
-            &_title, &_i {
-                margin-right: 10px;
-            }
-        }
-        @media screen and (min-width: 768px) {
+        } 
+        @include tablet__responsive {
             .function {
-                padding: 50px 0 50px 20px;
                 &_section {
-                    @include row;
-                    
-                }
-                &_title {
-                    width: 100%;
-                    padding: 15px 10px;
-                }
-                .cards {
-                    @include flex;
-                    width: fit-content
-                }
-                &_card {
-                    @include rcenter;
-                    background-color: $bc_lightgrey;
-                    border-radius: 30px;
-                    align-items: center;
-                    width: 90%;
-                    height: 120px;
-                    &_title {
-                        z-index: 1;
-                        @include circle;
-                        background-color: $color_primary;
-                        color: $color_white;    
-                        justify-content: center;
+                @include rwrap;
+                margin-left: 50px;
+                :hover {
+                        background: #f2eafb;
+        
+                        i {
+                            color: $color_primary;
+                        }
+                        h6 {
+                            background: $color_primary;
+                        }
                     }
-                    &_title, &_i {
-                        margin-right: 10px;
+                    &_title {
+                        width: 100%;
+                        display: flex;
                     }
                 }
             }
         }
-    }    
+    } 
 }
-    
