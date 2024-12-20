@@ -2,99 +2,100 @@
 @import "../useful/_mixins";
 
 @include mobile__responsive {
-    .restaurants {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: $bc_lightgrey;
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bc_lightgrey;
+    width: 100%;
+    padding-top: 20px;
+    .menus {
+      @include cwrap;
+      margin-left: 50px;
+    }
+
+    &_cards {
+      width: fit-content;
+      margin: 12px 40px 50px 0;
+      background-color: $color_white;
+      border-radius: 10px;
+      box-shadow: 10px 10px 5px $bc_lightgrey;
+      text-decoration: none;
+      color: $color_black;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: $color_black;
+      }
+
+      .restaurants_img {
         width: 100%;
-        padding-top: 20px;
-        .menus {
-          @include cwrap;
-          margin-left: 50px;
-        }
-      
-        &_cards {
-          width: fit-content;
-          margin: 12px 40px 50px 0;
-          background-color: $color_white;
-          border-radius: 10px;
-          box-shadow: 10px 10px 5px $bc_lightgrey;
-          text-decoration: none;
-          color: $color_black;
-          position: relative;
-      
-          a {
-            text-decoration: none;
-            color: $color_black;
-          }
-      
-          .restaurants_img {
-            width: 100%;
-            margin: 0;
-            position: relative;
-      
-            .btn_nouveau {
-              color: green;
-              background-color: $color_tertiary;
-              position: absolute;
-              right: 10px;
-              top: 10px;
-            }
-          }
-      
-          img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px 10px 0 0;
-          }
-        }
-        .cards_content {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-      
-          .-infos {
-            display: flex;
-            flex-direction: column;
-            width: 295px;
-            h4 {
-              margin: 8px 0 0 8px;
-              padding: 0 4px 0 4px;
-            }
-            p {
-              margin: 4px 0 12px 8px;
-              padding: 0 4px 0 4px;
-            }
-          }
+        margin: 0;
+        position: relative;
+
+        .btn_nouveau {
+          color: green;
+          background-color: $color_tertiary;
+          position: absolute;
+          right: 10px;
+          top: 10px;
         }
       }
-      
-      p,
-      h4 {
-        margin: 4px 0 0 0;
-        padding: 0 4px 0 4px;
-        }
-    @include tablet__responsive {
-        .restaurants {
-            background-color: $bc_lightgrey;
-            @include rwrap;
-            
-            .menus {
-                @include rwrap;
-                margin-left: 50px;
-            }
-            &_title {
-                @include row;
-                width: 76%;
-            }
-            &_cards {
-                width: 35%;
-            }
-            &_img {
-                object-fit: cover;
-            }
-        }
+
+      img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
     }
+    .cards_content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+
+      .-infos {
+        display: flex;
+        flex-direction: column;
+        width: 295px;
+        h4 {
+          margin: 8px 0 0 8px;
+          padding: 0 4px 0 4px;
+        }
+        p {
+          margin: 4px 0 12px 8px;
+          padding: 0 4px 0 4px;
+        }
+      }
+    }
+  }
+
+  p,
+  h4 {
+    margin: 4px 0 0 0;
+    padding: 0 4px 0 4px;
+  }
+}
+@include tablet__responsive {
+  .restaurants {
+    background-color: $bc_lightgrey;
+    @include rwrap;
+
+    .menus {
+      @include rwrap;
+      margin-left: 50px;
+    }
+    &_title {
+      @include row;
+      width: 76%;
+    }
+    &_cards {
+      width: 35%;
+    }
+    &_img {
+      object-fit: cover;
+    }
+  }
 }

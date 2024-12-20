@@ -4,76 +4,83 @@
 
 /* mobile responsive */
 @include mobile__responsive {
-    .function {
-        @include ccenter;
-        background-color: $color_white;
-        padding-top: 20px;
-        width: 100%;
-        h3 {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-        }
-        &_section {
-            @include cwrap;
-            &_card {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                border-radius: 20px;
-                margin: 12px 0;
-                border: 1px solid $bc_lightgrey;
-                padding: 0 70px 0 32px;
-                background-color: $bc_lightgrey;
-                color: black;
-                height: 65px;
-          
-                h6 {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  position: sticky;
-                  color: $color_white;
-                  background-color: $color_primary;
-                  border-radius: 50%;
-                  width: 20px;
-                  height: 5px;
-                  margin-left: -42px;
-                  margin-right: 25px;
-                  padding-top: 10px;
-                  padding-bottom: 10px;
-                }
-          
-                p {
-                  font-weight: bold;
-                }
-          
-                i {
-                  padding: 0 18px 0 0;
-                }
-            }
-        } 
+  .function {
+    @include ccenter;
+    background-color: $color_white;
+    padding: 20px 0;
+    width: 100%;
+    h3 {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+    &_section {
+      @include cwrap;
+      &_card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 20px;
+        margin: 12px 0;
+        border: 1px solid $bc_lightgrey;
+        padding: 0 70px 0 32px;
+        background-color: $bc_lightgrey;
+        color: black;
+        height: 65px;
         @include tablet__responsive {
-            .function {
-                &_section {
-                @include rwrap;
-                margin-left: 50px;
-                :hover {
-                        background: #f2eafb;
-        
-                        i {
-                            color: $color_primary;
-                        }
-                        h6 {
-                            background: $color_primary;
-                        }
-                    }
-                    &_title {
-                        width: 100%;
-                        display: flex;
-                    }
-                }
-            }
+          padding: 0 50px 0 32px;
         }
-    } 
+
+        h6 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: sticky;
+          color: $color_white;
+          background-color: $color_primary;
+          border-radius: 50%;
+          width: 20px;
+          height: 5px;
+          margin-left: -42px;
+          margin-right: 25px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        p {
+          font-weight: bold;
+        }
+
+        i {
+          padding: 0 18px 0 0;
+        }
+      }
+      @include tablet__responsive {
+        &_title {
+          width: 100%;
+          display: flex;
+          margin-left: 20px;
+        }
+      }
+    }
+    @include tablet__responsive {
+      .function {
+        &_section {
+          @include row;
+          justify-content: space-evenly;
+          margin: 0 14%;
+          :hover {
+            background: #f2eafb;
+
+            i {
+              color: $color_primary;
+            }
+            h6 {
+              background: $color_primary;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,77 +1,83 @@
+/*******************    COLUMN   *******************/
 /* Flex, Column */
 @mixin column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 /* Flex, Column, Center */
 @mixin ccenter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin :auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
 }
 /* Flex, Column, Wrap */
 @mixin cwrap {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
 }
+
+/*******************    ROW   *******************/
 /* Flex, Row */
 @mixin row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 /* Flex, Row, Center */
 @mixin rcenter {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 /* Flex, Row, Reverse */
 @mixin rrverse {
-    display: flex;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
 /* Flex, Row, Wrap */
 @mixin rwrap {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-/* Flex */
-@mixin flex {
-    display: flex;
-}
-/* Width 100% */
-@mixin width {
-    width: 100%;
-}
-/* Italic */
-@mixin italic {
-    font-style: italic;
-}
-/* Cercle */
-/**** cercle ****/
-@mixin circle {
-    border-radius: 50%;
-    padding: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-/**** Responsive ****/
+/*******************    FLEX   *******************/
+@mixin flex {
+  display: flex;
+}
+
+/*******************    WIDTH   *******************/
+@mixin width {
+  width: 100%;
+}
+/*******************    ITALIC   *******************/
+@mixin italic {
+  font-style: italic;
+}
+
+/*******************    CERCLE   *******************/
+/**** cercle ****/
+@mixin circle {
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/*******************    RESPONSIVE   *******************/
 /* Mobile */
 @mixin mobile__responsive {
-    @media screen and (min-width: 325px) {
-        @content;
-    }
+  @media screen and (min-width: 325px) {
+    @content;
+  }
 }
 /* Tablet */
 @mixin tablet__responsive {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 @mixin desktop__responsive {
-    @media screen and (min-width: 1024px) {
-        @content;
-    }
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
 }

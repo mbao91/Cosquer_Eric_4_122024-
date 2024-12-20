@@ -1,0 +1,180 @@
+@import "./_variables";
+
+/**
+SCSS des différentes animations
+ */
+
+.-hearts {
+  font-size: 32px;
+  height: 58px;
+  width: 40px;
+  align-items: center;
+  margin-right: 8px;
+
+  .far {
+    opacity: 1;
+    color: $background_grey;
+    position: absolute;
+  }
+
+  .fas {
+    color: $color_white;
+  }
+}
+
+.-hearts:hover {
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 32px;
+
+  .far {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .fas {
+    opacity: 1;
+    color: #da22ff;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.-heartsMenu {
+  font-size: 32px;
+  padding-top: 22px;
+
+  .far {
+    opacity: 1;
+    color: $color_black;
+    position: absolute;
+    right: 15px;
+    bottom: 6px;
+  }
+
+  .fas {
+    color: $color_white;
+    position: absolute;
+    right: 15px;
+    bottom: 6px;
+  }
+}
+
+.-heartsMenu:hover {
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 22px;
+
+  .far {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .fas {
+    opacity: 1;
+    color: #da22ff;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.menu:hover {
+  .menu_check {
+    display: block;
+    align-items: center;
+    justify-content: flex-end;
+    color: $color_white;
+    padding: 0;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background-color: $color_tertiary;
+    overflow: hidden;
+    transition: all 3s;
+    animation: check_translation 0.5s 1 forwards;
+  }
+
+  .menu_prix {
+    animation: prix_translation 0.5s 1 forwards;
+  }
+}
+
+.menu_check i {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+  animation: rotate_icon 0.5s 1;
+}
+
+.spin {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+
+  &:after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 100%;
+    border: 6px solid;
+    border-color: $color_primary $color_black $color_tertiary $color_secondary;
+    animation: spin $spin_time;
+  }
+}
+
+.spinloader {
+  animation: spinloader $spin_time;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  background-color: rgba(10, 10, 10, 0.8);
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+.fade_short {
+  animation: fade-in 2s;
+}
+
+.fade_medium {
+  animation: fade-in 4s;
+}
+
+.fade_long {
+  animation: fade-in 6s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/**
+SCSS des différentes animations 375px<
+ */
+
+@media screen and (max-width: 375px) {
+  .spin:after {
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    right: 0;
+    top: 30%;
+  }
+}

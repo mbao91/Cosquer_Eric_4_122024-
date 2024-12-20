@@ -4,59 +4,71 @@
 @import "../components/_buttons";
 @import "../layout/_body";
 
-
-@media screen and (max-width: 3000px) {
-    .header {
-        @include ccenter;
-        img {
-            width: 250px;
-            height: 50px;
-            margin: auto;
-            padding-top: 15px;
-            padding-bottom: 10px
-        }
-        nav {
-            @include row;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            background-color: $bc_grey;
-            font-weight: bold;
-            z-index: 1;
-            input {
-                background-color: transparent;
-                border: 0;
-                outline: none;
-                font-weight: bold;
-                text-align: center;
-                width: 128px;
-            }
-        }
-        &_discover {
-            padding-top: 10px;
-            padding-bottom: 30px;
-            text-align: center;
-            @include column;
-            background-color: $bc_lightgrey;
-            &_title, &_p {
-                padding-bottom: 10px;
-                @include desktop__responsive {
-                    br {
-                        display: none;
-                    }
-                }
-                @include tablet__responsive {
-                    br {
-                        display: none;
-                    }
-                }
-            }
-        }
-        button {
-            margin: auto;  
-        }
+@include mobile__responsive {
+  .header {
+    @include ccenter;
+    &_logo {
+      width: 250px;
+      height: 50px;
+      margin: auto;
+      padding-top: 15px;
+      padding-bottom: 10px;
     }
+    &_menu {
+      @include flex;
+      align-items: center;
+      padding: 10px 0;
+      h3 {
+        margin: 0 auto;
+        font-size: x-large;
+      }
+    }
+    a {
+      position: absolute;
+      margin-left: 10px;
+    }
+    nav {
+      @include row;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      background-color: $bc_grey;
+      font-weight: bold;
+      z-index: 1;
+      input {
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        font-weight: bold;
+        text-align: center;
+        width: 128px;
+      }
+    }
+    &_discover {
+      padding-top: 10px;
+      padding-bottom: 30px;
+      text-align: center;
+      @include column;
+      background-color: $bc_lightgrey;
+      &_title,
+      &_p {
+        padding-bottom: 20px;
+      }
+      button {
+        margin: auto;
+      }
+    }
+    @include tablet__responsive {
+      br {
+        display: none;
+      }
+      .header {
+        &_menu {
+          h3 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
 }
-
-
-

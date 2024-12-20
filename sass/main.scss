@@ -1,9 +1,10 @@
-@use "../sass/components/_buttons";
-@use "../sass/layout/_header";
-@use "../sass/layout/_function";
-@use "../sass/layout/_restaurants";
-@use "../sass/layout/_footer";
-@use "../sass/layout/_body";
+@use "./components/_buttons";
+@use "./layout/_header";
+@use "./layout/_function";
+@use "./layout/_restaurants";
+@use "./layout/_footer";
+@use "./layout/_menus";
+@use "./layout/_body";
 @use "./useful/_variables";
 @use "./useful/_mixins";
 @use "./useful/_typography";

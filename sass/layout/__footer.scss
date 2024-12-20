@@ -3,63 +3,70 @@
 
 /* mobile responsive */
 @include mobile__responsive {
-    .footer {
-        @include column;
-        justify-content: flex-start;
-        color: $color_white;
-        background-color: $bc_lightblack;
-        padding: 20px;
-        h3 {
-            line-height: 2;
-            padding-bottom: 10px;
-            @include italic;
-        }
-        &_i {
-            margin-right: 10px
-        }
-        a {
-            text-decoration: none;
-            color: $color_white;
-        }
-        h3, &_ip1, &_ip2, p, a {
-            @include flex;
-        }
-        &_i, &_p, p {
-            margin-bottom: 5px;
-        }
-        &_ip2 > i {
-            font-size: 14px;
-        }
+  .footer {
+    @include column;
+    justify-content: flex-start;
+    color: $color_white;
+    background-color: $bc_lightblack;
+    padding: 20px;
+    h3 {
+      line-height: 2;
+      padding-bottom: 10px;
+      @include italic;
     }
+    &_i {
+      margin-right: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: $color_white;
+    }
+    h3,
+    &_ip1,
+    &_ip2,
+    p,
+    a {
+      @include flex;
+    }
+    &_i,
+    &_p,
+    p {
+      margin-bottom: 5px;
+    }
+    &_ip2 > i {
+      font-size: 14px;
+    }
+  }
 }
 /*Tablet and Desktop responsive*/
 @include tablet__responsive {
-    .footer {
-        @include rwrap;
-        color: $color_white;
-        justify-content: flex-end;
-        align-items: baseline;
-        align-content: center;
-        padding: 20px 5px;
-        background-color: $bc_lightblack;
-        h3 {
-            @include italic;
-            order: 1;
-            align-content: center;
-            flex-wrap: wrap;
-            margin-left: 50px;
-            margin-right: 20px;
-        }
-        &_ip1, &_ip2 {
-            align-items: center;
-            margin-left: 10px;
-        }
-        &_ip2, p {
-            margin-right: 20px;
-        }
-        &_i {
-            margin-right: 0;
-        }
+  .footer {
+    @include rwrap;
+    color: $color_white;
+    justify-content: flex-end;
+    align-items: baseline;
+    align-content: center;
+    padding: 30px 15px;
+    background-color: $bc_lightblack;
+    h3 {
+      @include italic;
+      order: 1;
+      align-content: center;
+      flex-wrap: wrap;
+      margin-left: 50px;
+      margin-right: 20px;
     }
-    
+    &_ip1,
+    &_ip2 {
+      align-items: center;
+      margin-left: 10px;
+    }
+    &_ip2,
+    p {
+      margin-right: 20px;
+    }
+    &_i {
+      margin-right: 0;
+    }
+  }
 }

@@ -1,0 +1,242 @@
+@import "../components/_buttons";
+/*@import "./__animation";*/
+/*@import "./__keyframes";*/
+@import "../useful/_variables";
+@import "../useful/_mixins";
+@import "../useful/_typography";
+
+/*
+SCSS des pages de menu
+ */
+@include mobile__responsive {
+  .header {
+    &_image {
+      @include width;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+  .cards {
+    background-color: $bc_lightgrey;
+    @include cwrap;
+    @include width;
+    &_name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $bc_lightgrey;
+      border-top-left-radius: 48px;
+      border-top-right-radius: 48px;
+      position: absolute;
+      top: 301px;
+      width: 100%;
+      @include italic;
+
+      p {
+        font-size: x-large;
+        font-weight: bold;
+        padding: 25px 0 0 25px;
+      }
+    }
+
+    &_content {
+      padding: 25px 25px 0 0;
+      @include tablet__responsive {
+        padding: 0;
+      }
+    }
+
+    .entrees,
+    .plats,
+    .desserts {
+      @include rwrap;
+      width: 95%;
+    }
+
+    .sous_titre {
+      margin: 25px 0 0 10px;
+      font-size: 18px;
+      @include width;
+
+      &:after {
+        content: "";
+        border-bottom: 2px solid $color_tertiary;
+        display: block;
+        padding-top: 3px;
+        width: 40px;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    border-radius: 18px;
+    box-shadow: 0 0 4px 2px darkgrey;
+    background-color: $color_white;
+    margin: 8px;
+    width: 100%;
+
+    &_contenu {
+      display: flex;
+      width: 87%;
+      flex-direction: column;
+      overflow: hidden;
+      white-space: pre-wrap;
+      padding: 10px;
+
+      p,
+      h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 0 0 8px;
+      }
+    }
+
+    &_prix {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 0 12px 3px 14px;
+      padding-bottom: 10px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    &_check {
+      display: none;
+      width: 0;
+
+      i {
+        font-size: x-large;
+      }
+    }
+  }
+
+  .btn_menu {
+    @include rcenter;
+    margin: 20px auto;
+  }
+}
+/*
+SCSS du header entre 900px et 376px
+ */
+
+@include tablet__responsive {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    border-radius: 18px;
+    background-color: $color_white;
+    margin: 0 22px 8px 22px;
+    width: 72%;
+
+    &_contenu {
+      display: flex;
+      width: 87%;
+      flex-direction: column;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .carte {
+    .sous_titre {
+      margin: 25px 0 8px 14%;
+      font-size: 18px;
+
+      &:after {
+        content: "";
+        border-bottom: 2px solid $color_tertiary;
+        display: block;
+        padding-top: 3px;
+        width: 40px;
+      }
+    }
+    &_name {
+      top: 320px;
+      p {
+        margin: auto;
+        /* ajouter Bold */
+      }
+    }
+  }
+}
+/*
+SCSS du header 375px<
+ */
+
+/*@media screen and (max-width: 375px) {
+  .carte {
+    background-color: $bc_grey;
+    margin: 0;
+
+    &_name {
+      display: flex;
+      align-items: center;
+      background-color: $bc_grey;
+      border-top-left-radius: 48px;
+      border-top-right-radius: 48px;
+      position: absolute;
+      top: 245px;
+      width: 100%;
+
+      p {
+        font-size: x-large;
+        font-family: "Shrikhand", cursive;
+        padding: 18px 0 0 16px;
+      }
+    }
+
+    .entrees,
+    .plats,
+    .desserts {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .entrees h2,
+    .plats h2,
+    .desserts h2 {
+      margin: 8px 0 8px 14px;
+      border-bottom: 2px solid $color_tertiary;
+      width: 40px;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    border-radius: 18px;
+    background-color: $color_white;
+    margin-bottom: 8px;
+    width: 95%;
+
+    &_contenu {
+      display: flex;
+      width: 87%;
+      flex-direction: column;
+      overflow: hidden;
+      white-space: nowrap;
+
+      p,
+      h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &_check {
+      display: none;
+    }
+  }
+
+  .btn_menu {
+    width: 215px;
+    padding: 12px;
+    margin: 16px 52px 16px 68px;
+  }
+}*/
