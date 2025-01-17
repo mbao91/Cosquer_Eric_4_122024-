@@ -1,4 +1,26 @@
+@import "./_variables";
+@import "./_mixins";
 /* Global */
 * {
   font-family: "Roboto", sans-serif;
+}
+
+@include mobile__responsive {
+  .new_cards_name {
+    p {
+      font-size: x-large;
+      font-family: "Shrikhand", cursive;
+      padding: 18px 0 0 16px;
+    }
+  }
+
+  .header {
+    &_menu {
+      h3 {
+        font-family: "Shrikhand", cursive;
+        font-weight: map-get($font_weight, black);
+        font-style: map-get($font_style, italic);
+      }
+    }
+  }
 }
