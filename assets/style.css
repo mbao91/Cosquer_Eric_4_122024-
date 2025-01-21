@@ -1028,12 +1028,6 @@ SCSS des pages de menu
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    /*&_content {
-      @include tablet__responsive {
-        padding: 0;
-        padding-right: 42%;
-      }
-    }*/
   }
 }
 @media screen and (min-width: 325px) and (min-width: 768px) {
@@ -1050,7 +1044,7 @@ SCSS des pages de menu
     border-top-left-radius: 48px;
     border-top-right-radius: 48px;
     position: absolute;
-    top: 345px;
+    top: 350px;
     width: 100%;
     font-style: italic;
   }
@@ -1062,7 +1056,7 @@ SCSS des pages de menu
 }
 @media screen and (min-width: 325px) and (min-width: 768px) {
   .new_cards_name p {
-    padding: 25px 0 0 325px;
+    padding: 15px 0 0 325px;
   }
 }
 @media screen and (min-width: 325px) and (min-width: 768px) {
@@ -1105,7 +1099,7 @@ SCSS des pages de menu
     border-radius: 18px;
     box-shadow: 0 0 4px 2px darkgrey;
     background-color: #ffffff;
-    margin: 8px;
+    margin: 0 5px 15px;
     width: 100%;
   }
 }
@@ -1113,7 +1107,6 @@ SCSS des pages de menu
   .menu {
     display: flex;
     flex-direction: row;
-    margin: 0 22px 8px 22px;
     width: 72%;
   }
 }
@@ -1324,6 +1317,24 @@ Permet l'apparition des plats
 /**** color ****/
 /* font weight */
 /* font style */
+/*******************    COLUMN   *******************/
+/* Flex, Column */
+/* Flex, Column, Center */
+/* Flex, Column, Wrap */
+/*******************    ROW   *******************/
+/* Flex, Row */
+/* Flex, Row, Center */
+/* Flex, Row, Reverse */
+/* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
+/*******************    FLEX   *******************/
+/*******************    WIDTH   *******************/
+/*******************    ITALIC   *******************/
+/*******************    CERCLE   *******************/
+/**** cercle ****/
+/*******************    RESPONSIVE   *******************/
+/* Mobile */
+/* Tablet */
 /**
 SCSS des différentes animations
  */
@@ -1366,14 +1377,24 @@ SCSS des différentes animations
   opacity: 1;
   color: #000000;
   position: absolute;
-  right: 390px;
+  right: 30px;
   bottom: 0px;
+}
+@media screen and (min-width: 768px) {
+  .-heartsMenu .far {
+    right: 410px;
+  }
 }
 .-heartsMenu .fas {
   color: #ffffff;
   position: absolute;
-  right: 390px;
+  right: 30px;
   bottom: 0px;
+}
+@media screen and (min-width: 768px) {
+  .-heartsMenu .fas {
+    right: 410px;
+  }
 }
 
 .-heartsMenu:hover {

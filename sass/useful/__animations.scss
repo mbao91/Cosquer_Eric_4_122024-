@@ -1,4 +1,5 @@
 @import "./_variables";
+@import "./_mixins";
 
 /**
 SCSS des différentes animations
@@ -47,15 +48,21 @@ SCSS des différentes animations
     opacity: 1;
     color: $color_black;
     position: absolute;
-    right: 390px;
+    right: 30px;
     bottom: 0px;
+    @include tablet__responsive {
+      right: 410px;
+    }
   }
 
   .fas {
     color: $color_white;
     position: absolute;
-    right: 390px;
+    right: 30px;
     bottom: 0px;
+    @include tablet__responsive {
+      right: 410px;
+    }
   }
 }
 

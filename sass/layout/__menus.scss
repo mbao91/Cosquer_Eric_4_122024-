@@ -30,7 +30,7 @@ SCSS des pages de menu
       border-top-left-radius: 48px;
       border-top-right-radius: 48px;
       position: absolute;
-      top: 345px;
+      top: 350px;
       width: 100%;
       @include italic;
 
@@ -39,20 +39,13 @@ SCSS des pages de menu
         font-weight: map-get($font_weight, bold);
         padding: 15px 0 0 20px;
         @include tablet__responsive {
-          padding: 25px 0 0 325px;
+          padding: 15px 0 0 325px;
         }
       }
       @include tablet__responsive {
         width: 70%;
       }
     }
-
-    /*&_content {
-      @include tablet__responsive {
-        padding: 0;
-        padding-right: 42%;
-      }
-    }*/
 
     .entrees,
     .plats,
@@ -84,11 +77,10 @@ SCSS des pages de menu
     border-radius: 18px;
     box-shadow: 0 0 4px 2px darkgrey;
     background-color: $color_white;
-    margin: 8px;
+    margin: 0 5px 15px;
     width: 100%;
     @include tablet__responsive {
       @include row;
-      margin: 0 22px 8px 22px;
       width: 72%;
     }
 
