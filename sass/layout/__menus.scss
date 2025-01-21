@@ -20,7 +20,7 @@ SCSS des pages de menu
     background-color: $bc_lightgrey;
     @include cwrap;
     @include tablet__responsive {
-      margin: 0 13%;
+      margin: 0 15%;
     }
     &_name {
       display: flex;
@@ -38,18 +38,21 @@ SCSS des pages de menu
         font-size: x-large;
         font-weight: map-get($font_weight, bold);
         padding: 15px 0 0 20px;
+        @include tablet__responsive {
+          padding: 25px 0 0 325px;
+        }
       }
       @include tablet__responsive {
-        width: 74%;
+        width: 70%;
       }
     }
 
-    &_content {
+    /*&_content {
       @include tablet__responsive {
         padding: 0;
         padding-right: 42%;
       }
-    }
+    }*/
 
     .entrees,
     .plats,
@@ -104,6 +107,7 @@ SCSS des pages de menu
       h4 {
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
         padding: 0 0 0 8px;
       }
     }

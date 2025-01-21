@@ -52,6 +52,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -72,6 +73,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -87,9 +89,7 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-size: x-large;
     font-family: "Shrikhand", cursive;
-    padding: 18px 0 0 16px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -149,8 +149,7 @@
     justify-content: center;
     margin: auto;
   }
-  .header_logo,
-  .header_menu-logo {
+  .header_logo, .header_menu-logo {
     width: 230px;
     height: 35px;
     margin: 10px auto;
@@ -193,8 +192,7 @@
     flex-direction: column;
     background-color: #f2f2f2;
   }
-  .header_discover_title,
-  .header_discover_p {
+  .header_discover_title, .header_discover_p {
     padding-bottom: 20px;
   }
   .header_discover button {
@@ -218,6 +216,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -276,8 +275,14 @@
     margin: auto;
     background-color: #ffffff;
     padding: 20px 0;
+  }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .function {
     width: 100%;
   }
+}
+@media screen and (min-width: 325px) {
   .function h3 {
     width: 100%;
     display: flex;
@@ -295,7 +300,7 @@
     border-radius: 20px;
     margin: 12px 0;
     border: 1px solid #f2f2f2;
-    padding: 0 70px 0 32px;
+    padding: 0 80px 0 32px;
     background-color: #f2f2f2;
     color: black;
     height: 65px;
@@ -315,12 +320,10 @@
     color: #ffffff;
     background-color: #9356dc;
     border-radius: 50%;
-    width: 20px;
-    height: 5px;
+    width: 10px;
     margin-left: -42px;
     margin-right: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 5px;
   }
   .function_section_card p {
     font-weight: bold;
@@ -365,6 +368,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -386,11 +390,10 @@
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    margin-left: 50px;
   }
   .restaurants_cards {
     width: fit-content;
-    margin: 12px 40px 50px 0;
+    margin: 12px 0 35px 0;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #f2f2f2;
@@ -465,6 +468,7 @@
   }
   .restaurants_cards {
     width: 35%;
+    margin-right: 40px;
   }
   .restaurants_img {
     object-fit: cover;
@@ -479,6 +483,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -502,6 +507,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -517,9 +523,7 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-size: x-large;
     font-family: "Shrikhand", cursive;
-    padding: 18px 0 0 16px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -537,12 +541,35 @@
     background-color: #211f1f;
     padding: 20px;
   }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: flex-end;
+    align-items: baseline;
+    align-content: center;
+    padding: 30px 15px;
+  }
+}
+@media screen and (min-width: 325px) {
   .footer h3 {
-    color: white;
     line-height: 2;
     padding-bottom: 10px;
     font-style: italic;
   }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .footer h3 {
+    order: 1;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 325px) {
   .footer_i1 {
     margin-right: 10px;
   }
@@ -554,17 +581,12 @@
     color: #ffffff;
     margin-top: 2px;
   }
-  .footer h3,
-  .footer_ip1,
-  .footer_ip2,
+  .footer h3, .footer_ip1, .footer_ip2,
   .footer p,
   .footer a {
     display: flex;
   }
-  .footer_i1,
-  .footer_i2,
-  .footer_p1,
-  .footer_p2,
+  .footer_i1, .footer_i2, .footer_p1, .footer_p2,
   .footer p {
     margin-bottom: 5px;
   }
@@ -579,27 +601,7 @@
 }
 /*Tablet and Desktop responsive*/
 @media screen and (min-width: 768px) {
-  .footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    color: #ffffff;
-    justify-content: flex-end;
-    align-items: baseline;
-    align-content: center;
-    padding: 30px 15px;
-    background-color: #211f1f;
-  }
-  .footer h3 {
-    font-style: italic;
-    order: 1;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-left: 50px;
-    margin-right: 20px;
-  }
-  .footer_ip1,
-  .footer_ip2 {
+  .footer_ip1, .footer_ip2 {
     align-items: center;
     margin-left: 10px;
   }
@@ -664,6 +666,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -684,6 +687,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -699,9 +703,7 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-size: x-large;
     font-family: "Shrikhand", cursive;
-    padding: 18px 0 0 16px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -721,6 +723,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -741,6 +744,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -756,9 +760,7 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-size: x-large;
     font-family: "Shrikhand", cursive;
-    padding: 18px 0 0 16px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -818,8 +820,7 @@
     justify-content: center;
     margin: auto;
   }
-  .header_logo,
-  .header_menu-logo {
+  .header_logo, .header_menu-logo {
     width: 230px;
     height: 35px;
     margin: 10px auto;
@@ -862,8 +863,7 @@
     flex-direction: column;
     background-color: #f2f2f2;
   }
-  .header_discover_title,
-  .header_discover_p {
+  .header_discover_title, .header_discover_p {
     padding-bottom: 20px;
   }
   .header_discover button {
@@ -884,6 +884,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -907,6 +908,7 @@
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -922,9 +924,7 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-size: x-large;
     font-family: "Shrikhand", cursive;
-    padding: 18px 0 0 16px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -942,12 +942,35 @@
     background-color: #211f1f;
     padding: 20px;
   }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: flex-end;
+    align-items: baseline;
+    align-content: center;
+    padding: 30px 15px;
+  }
+}
+@media screen and (min-width: 325px) {
   .footer h3 {
-    color: white;
     line-height: 2;
     padding-bottom: 10px;
     font-style: italic;
   }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .footer h3 {
+    order: 1;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 325px) {
   .footer_i1 {
     margin-right: 10px;
   }
@@ -959,17 +982,12 @@
     color: #ffffff;
     margin-top: 2px;
   }
-  .footer h3,
-  .footer_ip1,
-  .footer_ip2,
+  .footer h3, .footer_ip1, .footer_ip2,
   .footer p,
   .footer a {
     display: flex;
   }
-  .footer_i1,
-  .footer_i2,
-  .footer_p1,
-  .footer_p2,
+  .footer_i1, .footer_i2, .footer_p1, .footer_p2,
   .footer p {
     margin-bottom: 5px;
   }
@@ -984,27 +1002,7 @@
 }
 /*Tablet and Desktop responsive*/
 @media screen and (min-width: 768px) {
-  .footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    color: #ffffff;
-    justify-content: flex-end;
-    align-items: baseline;
-    align-content: center;
-    padding: 30px 15px;
-    background-color: #211f1f;
-  }
-  .footer h3 {
-    font-style: italic;
-    order: 1;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-left: 50px;
-    margin-right: 20px;
-  }
-  .footer_ip1,
-  .footer_ip2 {
+  .footer_ip1, .footer_ip2 {
     align-items: center;
     margin-left: 10px;
   }
@@ -1030,11 +1028,17 @@ SCSS des pages de menu
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+    /*&_content {
+      @include tablet__responsive {
+        padding: 0;
+        padding-right: 42%;
+      }
+    }*/
   }
 }
 @media screen and (min-width: 325px) and (min-width: 768px) {
   .new_cards {
-    margin: 0 13%;
+    margin: 0 15%;
   }
 }
 @media screen and (min-width: 325px) {
@@ -1057,14 +1061,13 @@ SCSS des pages de menu
   }
 }
 @media screen and (min-width: 325px) and (min-width: 768px) {
-  .new_cards_name {
-    width: 74%;
+  .new_cards_name p {
+    padding: 25px 0 0 325px;
   }
 }
 @media screen and (min-width: 325px) and (min-width: 768px) {
-  .new_cards_content {
-    padding: 0;
-    padding-right: 42%;
+  .new_cards_name {
+    width: 70%;
   }
 }
 @media screen and (min-width: 325px) {
@@ -1134,6 +1137,7 @@ SCSS des pages de menu
   .menu_contenu h4 {
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     padding: 0 0 0 8px;
   }
   .menu_prix {
@@ -1177,6 +1181,7 @@ SCSS des pages de menu
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -1197,6 +1202,7 @@ SCSS des pages de menu
 /* Flex, Row, Center */
 /* Flex, Row, Reverse */
 /* Flex, Row, Wrap */
+/* Flex, Row, Nowrap */
 /*******************    FLEX   *******************/
 /*******************    WIDTH   *******************/
 /*******************    ITALIC   *******************/
@@ -1212,9 +1218,7 @@ SCSS des pages de menu
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-size: x-large;
     font-family: "Shrikhand", cursive;
-    padding: 18px 0 0 16px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -1362,14 +1366,14 @@ SCSS des différentes animations
   opacity: 1;
   color: #000000;
   position: absolute;
-  right: 15px;
-  bottom: 6px;
+  right: 390px;
+  bottom: 0px;
 }
 .-heartsMenu .fas {
   color: #ffffff;
   position: absolute;
-  right: 15px;
-  bottom: 6px;
+  right: 390px;
+  bottom: 0px;
 }
 
 .-heartsMenu:hover {

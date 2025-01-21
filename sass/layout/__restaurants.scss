@@ -11,12 +11,11 @@
     padding-top: 20px;
     .menus {
       @include cwrap;
-      margin-left: 50px;
     }
 
     &_cards {
       width: fit-content;
-      margin: 12px 40px 50px 0;
+      margin: 12px 0 35px 0;
       background-color: $color_white;
       border-radius: 10px;
       box-shadow: 10px 10px 5px $bc_lightgrey;
@@ -93,6 +92,7 @@
     }
     &_cards {
       width: 35%;
+      margin-right: 40px;
     }
     &_img {
       object-fit: cover;

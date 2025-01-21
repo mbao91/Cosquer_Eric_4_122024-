@@ -41,6 +41,11 @@
   flex-flow: row wrap;
   justify-content: center;
 }
+/* Flex, Row, Nowrap */
+@mixin rnwrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
 
 /*******************    FLEX   *******************/
 @mixin flex {
