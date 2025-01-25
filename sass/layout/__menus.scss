@@ -24,27 +24,44 @@ SCSS des pages de menu
     }
     &_name {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+      flex-direction: row;
+      justify-content: center;
       background-color: $bc_lightgrey;
       border-top-left-radius: 48px;
       border-top-right-radius: 48px;
       position: absolute;
-      top: 350px;
+      top: 355px;
       width: 100%;
       @include italic;
-
-      p {
-        font-size: x-large;
-        font-weight: map-get($font_weight, bold);
-        padding: 15px 0 0 20px;
-        @include tablet__responsive {
-          padding: 15px 0 0 325px;
-        }
-      }
       @include tablet__responsive {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 45px;
         width: 70%;
       }
+    }
+
+    .cards_title {
+      margin-right: 70px;
+      padding-top: 15px;
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 20px;
+      @include tablet__responsive {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: baseline;
+        margin-right: 70px;
+        padding-top: 20px;
+        position: absolute;
+      }
+    }
+
+    .cards_title1 {
+      margin-right: 10px;
+      font-size: x-large;
+      font-weight: bold;
     }
 
     .entrees,

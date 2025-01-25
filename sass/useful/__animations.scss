@@ -45,23 +45,19 @@ SCSS des différentes animations
   padding-top: 22px;
 
   .far {
-    opacity: 1;
-    color: $color_black;
-    position: absolute;
-    right: 30px;
-    bottom: 0px;
-    @include tablet__responsive {
-      right: 410px;
+    @include mobile__responsive {
+      opacity: 1;
+      color: $color_black;
+      position: absolute;
+      bottom: 20px;
     }
   }
 
   .fas {
-    color: $color_white;
-    position: absolute;
-    right: 30px;
-    bottom: 0px;
-    @include tablet__responsive {
-      right: 410px;
+    @include mobile__responsive {
+      color: $color_white;
+      bottom: 20px;
+      position: absolute;
     }
   }
 }

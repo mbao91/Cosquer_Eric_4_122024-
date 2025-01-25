@@ -1038,33 +1038,51 @@ SCSS des pages de menu
 @media screen and (min-width: 325px) {
   .new_cards_name {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    flex-direction: row;
+    justify-content: center;
     background-color: #f2f2f2;
     border-top-left-radius: 48px;
     border-top-right-radius: 48px;
     position: absolute;
-    top: 350px;
+    top: 355px;
     width: 100%;
     font-style: italic;
-  }
-  .new_cards_name p {
-    font-size: x-large;
-    font-weight: bold;
-    padding: 15px 0 0 20px;
-  }
-}
-@media screen and (min-width: 325px) and (min-width: 768px) {
-  .new_cards_name p {
-    padding: 15px 0 0 325px;
   }
 }
 @media screen and (min-width: 325px) and (min-width: 768px) {
   .new_cards_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 45px;
     width: 70%;
   }
 }
 @media screen and (min-width: 325px) {
+  .new_cards .cards_title {
+    margin-right: 70px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .new_cards .cards_title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    margin-right: 70px;
+    padding-top: 20px;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 325px) {
+  .new_cards .cards_title1 {
+    margin-right: 10px;
+    font-size: x-large;
+    font-weight: bold;
+  }
   .new_cards .entrees,
   .new_cards .plats,
   .new_cards .desserts {
@@ -1373,27 +1391,19 @@ SCSS des différentes animations
   font-size: 32px;
   padding-top: 22px;
 }
-.-heartsMenu .far {
-  opacity: 1;
-  color: #000000;
-  position: absolute;
-  right: 30px;
-  bottom: 0px;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 325px) {
   .-heartsMenu .far {
-    right: 410px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    bottom: 20px;
   }
 }
-.-heartsMenu .fas {
-  color: #ffffff;
-  position: absolute;
-  right: 30px;
-  bottom: 0px;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 325px) {
   .-heartsMenu .fas {
-    right: 410px;
+    color: #ffffff;
+    bottom: 20px;
+    position: absolute;
   }
 }
 
