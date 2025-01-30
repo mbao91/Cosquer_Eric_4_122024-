@@ -89,7 +89,10 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-family: "Shrikhand", cursive;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -525,7 +528,10 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-family: "Shrikhand", cursive;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -710,7 +716,10 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-family: "Shrikhand", cursive;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -767,7 +776,10 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-family: "Shrikhand", cursive;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -932,7 +944,10 @@
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-family: "Shrikhand", cursive;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -1241,7 +1256,10 @@ SCSS des pages de menu
 
 @media screen and (min-width: 325px) {
   .new_cards_name p {
-    font-family: "Shrikhand", cursive;
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 40px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
