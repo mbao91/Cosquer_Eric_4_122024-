@@ -6,76 +6,81 @@ SCSS des différentes animations
  */
 
 .-hearts {
-  font-size: 32px;
+  font-size: 30px;
   height: 58px;
   width: 40px;
   align-items: center;
   margin-right: 8px;
 
-  .far {
-    opacity: 1;
-    color: $bc_grey;
-    position: absolute;
-  }
+  .material-symbols-rounded {
+    .filled {
+      opacity: 1;
+      font-variation-settings: "FILL" 0, "wght" 800, "GRAD" -25, "opsz" 40;
+      color: $color_black;
+      position: absolute;
+    }
+    .empty {
+      color: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
+      font-variation-settings: "FILL" 1, "wght" 800, "GRAD" -25, "opsz" 40;
+    }
 
-  .fas {
-    color: $color_white;
-  }
-}
+    &:active {
+      cursor: pointer;
+      font-size: 30px;
 
-.-hearts:hover {
-  cursor: pointer;
-  overflow: hidden;
-  font-size: 32px;
+      .filled {
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
 
-  .far {
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .fas {
-    opacity: 1;
-    color: #da22ff;
-    transition: all 0.5s ease-in-out;
+      .empty {
+        opacity: 1;
+        color: linear-gradient(#9356dc 20%, #da22ff 80%);
+        transition: all 0.5s ease-in-out;
+      }
+    }
   }
 }
 
 .-heartsMenu {
-  font-size: 32px;
-  padding-top: 22px;
+  /* padding-top: 15px; */
+  /* padding-left: 15px; */
 
-  .far {
-    @include mobile__responsive {
-      opacity: 1;
-      color: $color_black;
-      position: absolute;
-      bottom: 20px;
+  span {
+    .filled {
+      font-size: 30px;
+      @include mobile__responsive {
+        opacity: 1;
+        color: $color_black;
+        font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 40;
+      }
     }
-  }
-
-  .fas {
-    @include mobile__responsive {
-      color: $color_white;
-      bottom: 20px;
-      position: absolute;
+    .empty {
+      @include mobile__responsive {
+        opacity: 0;
+        color: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
+        font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 40;
+      }
     }
-  }
-}
 
-.-heartsMenu:hover {
-  cursor: pointer;
-  overflow: hidden;
-  padding-top: 22px;
+    &:active {
+      cursor: pointer;
 
-  .far {
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
+      .material-symbols-rounded {
+        .filled {
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+          font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 40;
+        }
 
-  .fas {
-    opacity: 1;
-    color: #da22ff;
-    transition: all 0.5s ease-in-out;
+        .empty {
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+          color: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
+          font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 40;
+        }
+      }
+    }
   }
 }
 
@@ -103,7 +108,7 @@ SCSS des différentes animations
   display: flex;
   justify-content: center;
   margin-top: 22px;
-  animation: rotate_icon 0.5s 1;
+  /*animation: rotate_icon 0.5s 1;*/
 }
 
 .spin {
@@ -148,15 +153,15 @@ SCSS des différentes animations
 }
 
 .fade_short {
-  animation: fade-in 2s;
+  animation: fade-in 1s;
 }
 
 .fade_medium {
-  animation: fade-in 4s;
+  animation: fade-in 2s;
 }
 
 .fade_long {
-  animation: fade-in 6s;
+  animation: fade-in 3s;
 }
 
 @keyframes fade-in {

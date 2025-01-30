@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ohmyfood</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,100,0,0&icon_names=favorite"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite"
+    />
     <script
       src="https://kit.fontawesome.com/6aaa0cf9a5.js"
       crossorigin="anonymous"
@@ -99,19 +107,18 @@
                 />
                 <p class="btn_nouveau">Nouveau</p>
               </div>
-
-              <!-- Lien vers la page du menu + animation coeur-->
-              <div class="cards_content">
-                <div class="cards_content -infos">
-                  <h4>La Palette du goût</h4>
-                  <p>Ménilmontant</p>
-                </div>
-                <div class="cards_content -hearts">
-                  <i class="fas fa-heart"></i>
-                  <i class="far fa-heart"></i>
-                </div>
-              </div>
             </a>
+            <!-- Lien vers la page du menu + animation coeur-->
+            <div class="cards_content">
+              <div class="cards_content -infos">
+                <h4>La Palette du goût</h4>
+                <p>Ménilmontant</p>
+              </div>
+              <div class="cards_content -hearts">
+                <span class="material-symbols-rounded empty"> favorite </span>
+                <span class="material-symbols-rounded filled"> favorite </span>
+              </div>
+            </div>
           </div>
 
           <!-- 2eme carte restaurants-->
@@ -132,8 +139,7 @@
                   <p>Charonne</p>
                 </div>
                 <div class="cards_content -hearts">
-                  <i class="fas fa-heart"></i>
-                  <i class="far fa-heart"></i>
+                  <span class="material-symbols-rounded"> favorite </span>
                 </div>
               </div>
             </a>
@@ -156,8 +162,7 @@
                   <p>Cité Rouge</p>
                 </div>
                 <div class="cards_content -hearts">
-                  <i class="fas fa-heart"></i>
-                  <i class="far fa-heart"></i>
+                  <span class="material-symbols-rounded"> favorite </span>
                 </div>
               </div>
             </a>
@@ -180,8 +185,7 @@
                   <p>Folie-Méricourt</p>
                 </div>
                 <div class="cards_content -hearts">
-                  <i class="fas fa-heart"></i>
-                  <i class="far fa-heart"></i>
+                  <span class="material-symbols-rounded"> favorite </span>
                 </div>
               </div>
             </a>
@@ -196,26 +200,32 @@
     </main>
 
     <footer class="footer">
-      <h3>ohmyfood</h3>
-      <div class="footer_ip1">
-        <div class="footer_i1">
-          <i class="fa-solid fa-utensils"></i>
+      <div class="footer1">
+        <h3>ohmyfood</h3>
+        <div class="footer_ip1">
+          <div class="footer_i1">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="footer_p1">
+            <p>Proposer un restaurant</p>
+          </div>
         </div>
-        <div class="footer_p1">
-          <p>Proposer un restaurant</p>
+        <div class="footer_ip2">
+          <div class="footer_i2">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <div class="footer_p2">
+            <p>Devenir partenaire</p>
+          </div>
+        </div>
+        <div class="footer_p3">
+          <p>Mentions légales</p>
+        </div>
+        <!-- Lien vers une messagerie-->
+        <div class="footer_contact">
+          <a href="mailto:ohmyfood@contact.fr">Contact</a>
         </div>
       </div>
-      <div class="footer_ip2">
-        <div class="footer_i2">
-          <i class="fa-solid fa-handshake-angle"></i>
-        </div>
-        <div class="footer_p2">
-          <p>Devenir partenaire</p>
-        </div>
-      </div>
-      <p>Mentions légales</p>
-      <!-- Lien vers une messagerie-->
-      <a href="mailto:ohmyfood@contact.fr">Contact</a>
     </footer>
   </body>
 </html>

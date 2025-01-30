@@ -20,12 +20,12 @@ SCSS des pages de menu
     background-color: $bc_lightgrey;
     @include cwrap;
     @include tablet__responsive {
-      margin: 0 15%;
+      margin: 35px 15% 0;
+      padding-top: 10px;
     }
     &_name {
       display: flex;
       flex-direction: row;
-      justify-content: center;
       background-color: $bc_lightgrey;
       border-top-left-radius: 48px;
       border-top-right-radius: 48px;
@@ -37,30 +37,28 @@ SCSS des pages de menu
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding-bottom: 45px;
+        padding-bottom: 80px;
+        padding-left: 0;
         width: 70%;
       }
     }
 
     .cards_title {
-      margin-right: 70px;
-      padding-top: 15px;
+      padding-top: 25px;
       display: flex;
       flex-direction: row;
-      padding-bottom: 20px;
       @include tablet__responsive {
         display: flex;
         flex-flow: row nowrap;
         align-items: baseline;
-        margin-right: 70px;
-        padding-top: 20px;
+        padding-top: 40px;
         position: absolute;
       }
     }
 
     .cards_title1 {
       margin-right: 10px;
-      font-size: x-large;
+      font-size: 30px;
       font-weight: bold;
     }
 
@@ -75,6 +73,7 @@ SCSS des pages de menu
       margin: 25px 0 0 10px;
       font-size: 18px;
       padding-bottom: 10px;
+      padding-top: 25px;
       @include width;
       @include tablet__responsive {
         width: 72%;
@@ -92,7 +91,7 @@ SCSS des pages de menu
   .menu {
     @include row;
     border-radius: 18px;
-    box-shadow: 0 0 4px 2px darkgrey;
+    /*box-shadow: 0 0 4px 2px darkgrey;*/
     background-color: $color_white;
     margin: 0 5px 15px;
     width: 100%;
