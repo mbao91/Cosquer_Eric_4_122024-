@@ -70,7 +70,7 @@
           @include row;
           justify-content: space-evenly;
           margin: 0 14%;
-          :hover {
+          :hover:nth-child(+n + 2) {
             background: #f2eafb;
 
             i {

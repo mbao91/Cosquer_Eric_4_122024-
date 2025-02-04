@@ -26,6 +26,7 @@ SCSS des pages de menu
     &_name {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       background-color: $bc_lightgrey;
       border-top-left-radius: 48px;
       border-top-right-radius: 48px;
@@ -35,8 +36,8 @@ SCSS des pages de menu
       @include italic;
       @include tablet__responsive {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-flow: row nowrap;
+        /*justify-content: space-between;*/
         padding-bottom: 80px;
         padding-left: 0;
         width: 70%;
@@ -50,7 +51,7 @@ SCSS des pages de menu
       @include tablet__responsive {
         display: flex;
         flex-flow: row nowrap;
-        align-items: baseline;
+        align-items: flex-end;
         padding-top: 40px;
         position: absolute;
       }
@@ -60,6 +61,21 @@ SCSS des pages de menu
       margin-right: 10px;
       font-size: 30px;
       font-weight: bold;
+    }
+
+    .cards_heart {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      @include mobile__responsive {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+      }
     }
 
     .entrees,

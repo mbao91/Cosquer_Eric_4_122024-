@@ -92,7 +92,7 @@
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 40px;
+    font-size: 30px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -350,13 +350,13 @@
     justify-content: space-evenly;
     margin: 0 14%;
   }
-  .function .function_section :hover {
+  .function .function_section :hover:nth-child(+n+2) {
     background: #f2eafb;
   }
-  .function .function_section :hover i {
+  .function .function_section :hover:nth-child(+n+2) i {
     color: #9356dc;
   }
-  .function .function_section :hover h6 {
+  .function .function_section :hover:nth-child(+n+2) h6 {
     background: #9356dc;
   }
 }
@@ -396,7 +396,7 @@
     align-content: center;
   }
   .restaurants_cards {
-    width: fit-content;
+    width: 300px;
     margin: 12px 0 35px 0;
     background-color: #ffffff;
     border-radius: 10px;
@@ -531,7 +531,7 @@
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 40px;
+    font-size: 30px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -719,7 +719,7 @@
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 40px;
+    font-size: 30px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -779,7 +779,7 @@
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 40px;
+    font-size: 30px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -947,7 +947,7 @@
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 40px;
+    font-size: 30px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -1068,6 +1068,7 @@ SCSS des pages de menu
   .new_cards_name {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background-color: #f2f2f2;
     border-top-left-radius: 48px;
     border-top-right-radius: 48px;
@@ -1080,8 +1081,8 @@ SCSS des pages de menu
 @media screen and (min-width: 325px) and (min-width: 768px) {
   .new_cards_name {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-flow: row nowrap;
+    /*justify-content: space-between;*/
     padding-bottom: 80px;
     padding-left: 0;
     width: 70%;
@@ -1098,7 +1099,7 @@ SCSS des pages de menu
   .new_cards .cards_title {
     display: flex;
     flex-flow: row nowrap;
-    align-items: baseline;
+    align-items: flex-end;
     padding-top: 40px;
     position: absolute;
   }
@@ -1109,6 +1110,24 @@ SCSS des pages de menu
     font-size: 30px;
     font-weight: bold;
   }
+  .new_cards .cards_heart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 325px) and (min-width: 325px) {
+  .new_cards .cards_heart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 325px) {
   .new_cards .entrees,
   .new_cards .plats,
   .new_cards .desserts {
@@ -1259,7 +1278,7 @@ SCSS des pages de menu
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 40px;
+    font-size: 30px;
   }
   .header_menu h3 {
     font-family: "Shrikhand", cursive;
@@ -1387,70 +1406,53 @@ Permet l'apparition des plats
 SCSS des différentes animations
  */
 .-hearts {
-  font-size: 30px;
-  height: 58px;
-  width: 40px;
+  font-size: 40px;
+  display: flex;
   align-items: center;
-  margin-right: 8px;
-}
-.-hearts .material-symbols-rounded .filled {
-  opacity: 1;
-  font-variation-settings: "FILL" 0, "wght" 800, "GRAD" -25, "opsz" 40;
-  color: #000000;
-  position: absolute;
-}
-.-hearts .material-symbols-rounded .empty {
-  color: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
-  font-variation-settings: "FILL" 1, "wght" 800, "GRAD" -25, "opsz" 40;
-}
-.-hearts .material-symbols-rounded:active {
-  cursor: pointer;
-  font-size: 30px;
-}
-.-hearts .material-symbols-rounded:active .filled {
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-.-hearts .material-symbols-rounded:active .empty {
-  opacity: 1;
-  color: linear-gradient(#9356dc 20%, #da22ff 80%);
-  transition: all 0.5s ease-in-out;
 }
 
 .-heartsMenu {
-  /* padding-top: 15px; */
-  /* padding-left: 15px; */
-}
-.-heartsMenu span .filled {
   font-size: 30px;
 }
 @media screen and (min-width: 325px) {
-  .-heartsMenu span .filled {
-    opacity: 1;
-    color: #000000;
-    font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 40;
+  .-heartsMenu {
+    align-items: flex-start;
   }
 }
-@media screen and (min-width: 325px) {
-  .-heartsMenu span .empty {
-    opacity: 0;
-    color: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
-    font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 40;
+@media screen and (min-width: 768px) {
+  .-heartsMenu {
+    align-items: flex-end;
   }
 }
-.-heartsMenu span:active {
-  cursor: pointer;
+
+.-hearts, .-heartsMenu {
+  display: flex;
+  height: 58px;
+  width: 45px;
+  margin-right: 8px;
+  font-weight: thin;
 }
-.-heartsMenu span:active .material-symbols-rounded .filled {
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 40;
-}
-.-heartsMenu span:active .material-symbols-rounded .empty {
+.-hearts .material-symbols-outlined, .-heartsMenu .material-symbols-outlined {
   opacity: 1;
-  transition: all 0.5s ease-in-out;
-  color: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
+  font-size: 40px;
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 40;
+  color: #000000;
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.5s ease-in-out;
+}
+.-hearts .material-symbols-outlined:hover, .-heartsMenu .material-symbols-outlined:hover {
+  opacity: 1;
+  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 40;
+  cursor: pointer;
+  font-size: 40px;
+  background: linear-gradient(170deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
 }
 
 .menu:hover .menu_check {
