@@ -5,6 +5,7 @@
 /* mobile responsive */
 @include mobile__responsive {
   .function {
+    width: 300px;
     @include ccenter;
     background-color: $color_white;
     padding: 20px 0;
@@ -19,6 +20,21 @@
     }
     &_section {
       @include cwrap;
+      @include tablet__responsive {
+        width: 73%;
+        @include row;
+        justify-content: space-evenly;
+        margin: 0 14%;
+        :hover:nth-child(+n + 2) {
+          background: #f2eafb;
+          i {
+            color: $color_primary;
+            }
+          h6 {
+              background: $color_primary;
+          }
+        }
+      }
       &_card {
         display: flex;
         flex-direction: row;
@@ -50,6 +66,10 @@
 
         p {
           font-weight: bold;
+          font-size: 13px;
+          @include tablet__responsive {
+            font-size: medium;
+          }
         }
 
         i {
@@ -61,25 +81,6 @@
           width: 100%;
           display: flex;
           margin-left: 20px;
-        }
-      }
-    }
-    @include tablet__responsive {
-      .function {
-        &_section {
-          @include row;
-          justify-content: space-evenly;
-          margin: 0 14%;
-          :hover:nth-child(+n + 2) {
-            background: #f2eafb;
-
-            i {
-              color: $color_primary;
-            }
-            h6 {
-              background: $color_primary;
-            }
-          }
         }
       }
     }

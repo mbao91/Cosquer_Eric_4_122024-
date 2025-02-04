@@ -273,6 +273,7 @@
 /* mobile responsive */
 @media screen and (min-width: 325px) {
   .function {
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -297,6 +298,26 @@
     flex-flow: column wrap;
     align-content: center;
   }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .function_section {
+    width: 73%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 14%;
+  }
+  .function_section :hover:nth-child(+n+2) {
+    background: #f2eafb;
+  }
+  .function_section :hover:nth-child(+n+2) i {
+    color: #9356dc;
+  }
+  .function_section :hover:nth-child(+n+2) h6 {
+    background: #9356dc;
+  }
+}
+@media screen and (min-width: 325px) {
   .function_section_card {
     display: flex;
     flex-direction: row;
@@ -331,7 +352,15 @@
   }
   .function_section_card p {
     font-weight: bold;
+    font-size: 13px;
   }
+}
+@media screen and (min-width: 325px) and (min-width: 768px) {
+  .function_section_card p {
+    font-size: medium;
+  }
+}
+@media screen and (min-width: 325px) {
   .function_section_card i {
     padding: 0 18px 0 0;
   }
@@ -341,23 +370,6 @@
     width: 100%;
     display: flex;
     margin-left: 20px;
-  }
-}
-@media screen and (min-width: 325px) and (min-width: 768px) {
-  .function .function_section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0 14%;
-  }
-  .function .function_section :hover:nth-child(+n+2) {
-    background: #f2eafb;
-  }
-  .function .function_section :hover:nth-child(+n+2) i {
-    color: #9356dc;
-  }
-  .function .function_section :hover:nth-child(+n+2) h6 {
-    background: #9356dc;
   }
 }
 /**** color ****/
