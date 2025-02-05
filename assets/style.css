@@ -1325,7 +1325,7 @@ Rotation de l'icône check
 Déplacement du prix lors du survol
  */
 @keyframes prix_translation {
-  /*10% {
+  10% {
     transform: translate(-1px, 0);
   }
   20% {
@@ -1339,7 +1339,7 @@ Déplacement du prix lors du survol
   }
   80% {
     transform: translate(-8px, 0);
-  }*/
+  }
   100% {
     transform: translate(-5px, 0);
   }
@@ -1348,7 +1348,7 @@ Déplacement du prix lors du survol
 Apparition du check lors du survol
  */
 @keyframes check_translation {
-  /*10% {
+  10% {
     width: 10px;
   }
   20% {
@@ -1362,7 +1362,7 @@ Apparition du check lors du survol
   }
   80% {
     width: 45px;
-  }*/
+  }
   100% {
     width: 55px;
   }
@@ -1442,53 +1442,51 @@ SCSS des différentes animations
   height: 58px;
   width: 45px;
   margin-right: 8px;
-  font-weight: thin;
 }
 .-hearts .material-symbols-outlined, .-heartsMenu .material-symbols-outlined {
-  opacity: 1;
   font-size: 40px;
-  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 40;
+  font-variation-settings: "FILL" 0, "wght" 100;
   color: #000000;
-  position: absolute;
-  background-clip: text;
-  -webkit-background-clip: text;
   transition: all 0.5s ease-in-out;
 }
 .-hearts .material-symbols-outlined:hover, .-heartsMenu .material-symbols-outlined:hover {
-  opacity: 1;
-  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 40;
+  font-variation-settings: "FILL" 1, "wght" 100;
   cursor: pointer;
-  font-size: 40px;
   background: linear-gradient(170deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transition: all 0.5s ease-in-out;
-  position: absolute;
 }
 
-.menu:hover .menu_check {
-  display: block;
-  align-items: center;
-  justify-content: flex-end;
-  color: #ffffff;
-  padding: 0;
-  border-top-right-radius: 18px;
-  border-bottom-right-radius: 18px;
-  background-color: #99e2d0;
+.menu {
+  position: relative;
   overflow: hidden;
-  transition: all 3s;
-  animation: check_translation 0.5s 1 forwards;
+}
+.menu .menu_check {
+  position: absolute;
+  right: -65px;
+  top: 0;
+  height: 100%;
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  transition: transform 0.5s ease;
+}
+.menu .menu_check i {
+  color: white;
+  font-size: 20px;
+}
+.menu:hover .menu_check {
+  transform: translateX(-65px);
 }
 .menu:hover .menu_prix {
-  animation: prix_translation 0.5s 1 forwards;
+  transform: translateX(-65px);
 }
-
-.menu_check i {
-  display: flex;
-  justify-content: center;
-  margin-top: 22px;
-  /*animation: rotate_icon 0.5s 1;*/
+.menu .menu_prix {
+  transition: transform 0.5s ease;
 }
 
 .spin {
@@ -1548,7 +1546,7 @@ SCSS des différentes animations
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 /**

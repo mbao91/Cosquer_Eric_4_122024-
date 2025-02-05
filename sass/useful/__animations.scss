@@ -5,7 +5,7 @@
 SCSS des différentes animations
  */
 
-.-hearts {
+ .-hearts {
   font-size: 40px;
   @include flex;
   align-items: center;
@@ -21,63 +21,65 @@ SCSS des différentes animations
   }
 }
 
- .-hearts, .-heartsMenu {
+.-hearts, .-heartsMenu {
   @include flex;
   height: 58px;
   width: 45px;
   margin-right: 8px;
-  font-weight: thin;
 
   .material-symbols-outlined {
-    opacity: 1;
     font-size: 40px;
-    font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 40;
+    font-variation-settings: "FILL" 0, "wght" 100;
     color: $color_black;
-    position: absolute;
-    background-clip: text;
-    -webkit-background-clip: text;
     transition: all 0.5s ease-in-out;
     
     &:hover {
-      opacity: 1;
-      font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 40;
+      font-variation-settings: "FILL" 1, "wght" 100;
       cursor: pointer;
-      font-size: 40px;
       background: linear-gradient(170deg, $color_primary 0%, $color_secondary 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      transition: all 0.5s ease-in-out;
-      position: absolute;
     }
   }
 }
 
-.menu:hover {
+.menu {
+  position: relative;
+  overflow: hidden;
+
   .menu_check {
-    display: block;
+    position: absolute;
+    right: -65px;
+    top: 0;
+    height: 100%;
+    width: 65px;
+    display: flex;
     align-items: center;
-    justify-content: flex-end;
-    color: $color_white;
-    padding: 0;
-    border-top-right-radius: 18px;
-    border-bottom-right-radius: 18px;
+    justify-content: center;
     background-color: $color_tertiary;
-    overflow: hidden;
-    transition: all 3s;
-    animation: check_translation 0.5s 1 forwards;
+    border-radius: 0 15px 15px 0;
+    transition: transform 0.5s ease;
+    
+    i {
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  &:hover {
+    .menu_check {
+      transform: translateX(-65px);
+    }
+    
+    .menu_prix {
+      transform: translateX(-65px);
+    }
   }
 
   .menu_prix {
-    animation: prix_translation 0.5s 1 forwards;
+    transition: transform 0.5s ease;
   }
-}
-
-.menu_check i {
-  display: flex;
-  justify-content: center;
-  margin-top: 22px;
-  /*animation: rotate_icon 0.5s 1;*/
 }
 
 .spin {
@@ -138,7 +140,7 @@ SCSS des différentes animations
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 
